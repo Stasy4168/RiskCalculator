@@ -1,0 +1,33 @@
+{% extends 'Calculator/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if form.errors %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Ошибка формы
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+{% endif %}
+    
+    <div class="row mt-5 wrap">
+        <div class="col-12 col-md-6 mx-md-auto inner container">
+            <h1>Регистрация</h1>
+
+            <form action="{% url 'register_user' %}" method="POST">
+                {% csrf_token %}
+
+                {{ form|crispy }}
+                                  
+
+            <br/><br/>
+
+                <button class="btn btn-primary" type="submit">Вход</button>
+
+            </form>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+body {
+    margin: 0 auto;
+}
+
+.wrap {
+    margin: 0 auto;
+}
+
+.bold_text {
+  font-weight: bold;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+.chart {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #768897;
+    }
+  .inner {
+      max-width: 750px;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #507A98;
+    }
+  .inner {
+    max-width: 550px;
+    }
+  }
+  
